@@ -1,22 +1,81 @@
-@import url("styles/header.css");
-@import url("styles/banner.css");
-@import url("styles/carrossel.css");
-@import url("styles/topicos.css");
-@import url("styles/contato.css");
-@import url("styles/rodapé.css");
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .carrossel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .carrossel img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .carrossel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Online</h1>
+    </header>
 
-:root {
-    --cor-de-fundo: #EBECEE;
-    --branco: #FFFFFF;
-    --laranja: #EB9B00;
-    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
-    --fonte-principal: "Poppins";
-    --azul: #002F52;
-}
+    <div class="carrossel">
+        <button class="carrossel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <img src="https://via.placeholder.com/600x300/FF6347/FFFFFF?text=Livro+1" alt="Livro 1">
+        <img src="https://via.placeholder.com/600x300/4682B4/FFFFFF?text=Livro+2" alt="Livro 2" style="display:none;">
+        <img src="https://via.placeholder.com/600x300/32CD32/FFFFFF?text=Livro+3" alt="Livro 3" style="display:none;">
+        <button class="carrossel-control next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
 
-body {
-    background-color: var(--cor-de-fundo);
-    font-family: var(--fonte-principal);
-    font-size: 16px;
-    font-weight: 400;
-}
+    <div class="content">
+        <p>Bem-vindo à nossa biblioteca online. Explore nosso acervo e encontre seu próximo livro favorito!</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carrossel img');
+
+        function moveSlide(direction) {
+            slides[currentSlide].style.display = 'none';
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].style.display = 'block';
+        }
+    </script>
+</body>
+</html>
