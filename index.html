@@ -3,23 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biblioteca de Livros</title>
+<title>Biblioteca</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="carousel-container">
-  <div class="carousel">
-    <div class="book">
-      <img src="livro1.jpg" alt="Livro 1">
-      <p>Livro 1</p>
+<div class="container">
+  <section class="carousel-section">
+    <h2>Livros em Destaque</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="book">
+          <img src="livro1.jpg" alt="Livro 1">
+          <p>Livro 1</p>
+        </div>
+        <div class="book">
+          <img src="livro2.jpg" alt="Livro 2">
+          <p>Livro 2</p>
+        </div>
+        <!-- Adicionar mais livros conforme necessário -->
+      </div>
     </div>
-    <div class="book">
-      <img src="livro2.jpg" alt="Livro 2">
-      <p>Livro 2</p>
+  </section>
+
+  <section class="rent-section">
+    <h2>Livros Disponíveis para Aluguel</h2>
+    <div class="book-grid">
+      <div class="book">
+        <img src="livro3.jpg" alt="Livro 3">
+        <p>Livro 3</p>
+      </div>
+      <div class="book">
+        <img src="livro4.jpg" alt="Livro 4">
+        <p>Livro 4</p>
+      </div>
+      <!-- Adicionar mais livros para aluguel -->
     </div>
-    <!-- Adicione mais livros conforme necessário -->
-  </div>
+  </section>
 </div>
 
 <script src="script.js"></script>
