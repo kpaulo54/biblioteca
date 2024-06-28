@@ -1,54 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biblioteca para Aluguel de Livros</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Simples</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-  <div class="search-bar">
-    <input type="text" placeholder="Pesquisar livros...">
-    <button>Buscar</button>
-  </div>
-</header>
-
-<main>
-  <section class="carousel-section">
-    <h2>Livros em Destaque</h2>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="book">
-          <img src="livro1.jpg" alt="Livro 1">
-          <p>Livro 1</p>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="image1.jpg" alt="Imagem 1">
+            <img src="image2.jpg" alt="Imagem 2">
+            <img src="image3.jpg" alt="Imagem 3">
         </div>
-        <div class="book">
-          <img src="livro2.jpg" alt="Livro 2">
-          <p>Livro 2</p>
-        </div>
-        <!-- Adicionar mais livros conforme necessário -->
-      </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
-  </section>
-
-  <section class="rent-section">
-    <h2>Livros Disponíveis para Aluguel</h2>
-    <div class="book-carousel">
-      <div class="book">
-        <img src="livro3.jpg" alt="Livro 3">
-        <p>Livro 3</p>
-      </div>
-      <div class="book">
-        <img src="livro4.jpg" alt="Livro 4">
-        <p>Livro 4</p>
-      </div>
-      <!-- Adicionar mais livros para aluguel -->
-    </div>
-  </section>
-</main>
-
-<script src="script.js"></script>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
