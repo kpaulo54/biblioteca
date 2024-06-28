@@ -1,0 +1,29 @@
+.carousel-container {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.book {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book p {
+  margin-top: 10px;
+  font-size: 14px;
+}
