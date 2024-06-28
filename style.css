@@ -1,6 +1,15 @@
-.carousel-container {
-  width: 80%;
+.container {
+  max-width: 1200px;
   margin: 20px auto;
+  padding: 0 20px;
+}
+
+.carousel-section, .rent-section {
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -26,4 +35,10 @@
 .book p {
   margin-top: 10px;
   font-size: 14px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
